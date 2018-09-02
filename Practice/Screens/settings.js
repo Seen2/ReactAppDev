@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,Text} from 'react-native'
+import {View,Text,TouchableOpacity} from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 export default class  MySettingsScreen extends React.Component{
@@ -17,8 +17,18 @@ export default class  MySettingsScreen extends React.Component{
 
 	render() {
 		return (
-			<View style={{flex:1,justifyContent:'center',alignItems:'center'}}> 
-				<Text> Comming Soon </Text>
+			<View >
+				<TouchableOpacity
+					onPress={() => this.props.navigation.toggleDrawer()}
+					>
+						<Ionicons
+							name={`ios-menu${false ? '' : '-outline'}`}
+							size={30}
+							color="#2dbabc"
+						/>
+
+				</TouchableOpacity>
+
 			</View>
 		);
 	}

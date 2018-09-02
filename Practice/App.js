@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { TouchableOpacity,Image,Button, Text, View, StyleSheet } from 'react-native';
+import { View} from 'react-native';
 import { Constants } from 'expo';
 import {createSwitchNavigator,createDrawerNavigator} from 'react-navigation';
-import Ionicons from 'react-native-vector-icons/Ionicons'
 
 import MyHomeScreen from './Screens/myHome';
 import LoginScreen from './Screens/login';
@@ -13,7 +12,7 @@ import LogoutScreen from './Screens/logout';
 export default class App extends React.Component{
  render(){
 	 return(
-	<View style={{flex:1,paddingTop:100,}}>
+	<View style={{flex:1,paddingTop:30,}}>
 		<MyAppNavigator />
 	</View>
 	)
@@ -34,6 +33,7 @@ export const MyAppNavigator=createSwitchNavigator({
 })
 
 const MyDrawer = createDrawerNavigator({
+
 	Home: {
 		screen: MyHomeScreen,
 	},

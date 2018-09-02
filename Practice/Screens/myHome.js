@@ -26,8 +26,7 @@ export default class MyHomeScreen extends React.Component {
 					color="#2dbabc"
 				/>
 
-
-		</TouchableOpacity>
+			</TouchableOpacity>
 		);
 	}
 }
